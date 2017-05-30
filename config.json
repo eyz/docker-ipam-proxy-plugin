@@ -1,0 +1,30 @@
+{
+  "description": "Docker IPAM Plugin (v2) proxy to remote HTTP IPAM service",
+  "documentation": "https://github.com/eyz/docker-ipam-proxy-plugin",
+  "entrypoint": ["/docker-ipam-proxy-plugin"],
+  "env": [
+    {
+      "Description": "HTTP API host or host:port to receive reverse-proxied HTTP IPAM requests",
+      "Name": "IPAM_HTTP_PROXY_HOST",
+      "Settable": [
+        "value"
+      ],
+      "Value": "localhost:8080"
+    },
+    {
+      "Description": "set to true for detailed logging of HTTP IPAM requests",
+      "Name": "REQUEST_LOGGING_ENABLED",
+      "Settable": [
+        "value"
+      ],
+      "Value": "false"
+    }
+  ],
+  "interface": {
+    "socket": "ipamproxy.sock",
+    "types": ["docker.ipamdriver/1.0"]
+  },
+  "network": {
+    "type": "host"
+  }
+}

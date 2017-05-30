@@ -1,0 +1,16 @@
+FROM golang:1.8-alpine
+#FROM golang:alpine
+
+RUN set -ex && \
+    apk update && \
+    apk add gcc libc-dev git
+
+COPY . /go/src/github.com/eyz/docker-ipam-proxy-plugin
+
+WORKDIR /go/src/github.com/eyz/docker-ipam-proxy-plugin
+
+RUN set -ex && \
+    go get && \
+    go install
+
+CMD ["/go/bin/docker-ipam-proxy-plugin"]
