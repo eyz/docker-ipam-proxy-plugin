@@ -15,10 +15,10 @@ $ docker plugin enable eyz/docker-ipam-proxy-plugin:latest
 ## Installation from Docker Hub
 ```
 # where IPAMSERVER:PORT is your remote IPAM HTTP server and port
-$ docker plugin install eyz77/docker-ipam-proxy-plugin IPAM_HTTP_PROXY_HOST=IPAMSERVER:PORT 
+$ docker plugin install --grant-all-permissions eyz77/docker-ipam-proxy-plugin IPAM_HTTP_PROXY_HOST=IPAMSERVER:PORT 
 
 # where IPAMSERVER is your remote IPAM HTTP server (defaulting to TCP 80 for the port)
-$ docker plugin install eyz77/docker-ipam-proxy-plugin IPAM_HTTP_PROXY_HOST=IPAMSERVER 
+$ docker plugin install --grant-all-permissions eyz77/docker-ipam-proxy-plugin IPAM_HTTP_PROXY_HOST=IPAMSERVER 
 ```
 NOTE: in my testing, the plugin requires use of the host network, so you will need to grant the "network: [host]" permission
 
