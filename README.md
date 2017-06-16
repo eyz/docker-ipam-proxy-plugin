@@ -25,7 +25,7 @@ NOTE: in my testing, the plugin requires use of the host network, so you will ne
 ## Example usage
 ### Install, pointing to IPAM HTTP server IP and port "192.168.0.100:8080"
 ```
-$ docker plugin install eyz77/docker-ipam-proxy-plugin:latest IPAM_HTTP_PROXY_HOST=192.168.0.100:8080
+$ docker plugin install --grant-all-permissions eyz77/docker-ipam-proxy-plugin:latest IPAM_HTTP_PROXY_HOST=192.168.0.100:8080
 Plugin "eyz77/docker-ipam-proxy-plugin:latest" is requesting the following privileges:
  - network: [host]
 Do you grant the above permissions? [y/N] y
