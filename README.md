@@ -1,6 +1,9 @@
 # docker-ipam-proxy-plugin
 Docker IPAM Plugin (v2) proxy to remote HTTP IPAM service
 
+# IPAM HTTP API
+See https://github.com/docker/libnetwork/blob/master/docs/ipam.md for the Docker IPAM HTTP API. The IPAM proxy plugin is designed to be pointed at an HTTP server which implements this API.
+
 ## Configuration and installation and from source
 ```
 $ git clone https://github.com/eyz/docker-ipam-proxy-plugin.git
